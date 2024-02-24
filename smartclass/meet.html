@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMART CLASS</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+</head>
+
+<link rel="stylesheet" href="extra/swiper-bundle.min.css" />
+
+<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+
+<link href="extra/bootstrap.min.css" rel="stylesheet" type='text/css' >
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+<body>
+  
+      <nav
+        class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4"
+      >
+        <div class="container-fluid">
+          <div class="main-logo">
+            <a href="index.html"> SMARTCLASS </a>
+          </div>
+  
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+  
+            <div class="offcanvas-body justify-content-end">
+              <ul
+                class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0"
+              >
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link mx-2 active">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="./lobby.html"
+                    class="nav-link mx-2 text-decoration-underline"
+                    >Creer une classe</a
+                  >
+                </li>
+  
+                <!-- <li id="acc" class="d-none d-lg-flex">
+                  <a href="account.html" class="me-4">
+                    <iconify-icon
+                      icon="healthicons:person"
+                      class="fs-4 me-2"
+                    ></iconify-icon>
+                  </a>
+                </li> -->
+              </ul>
+  
+              <div class="mt-4 ml-0 mt-lg-0 d-lg-flex align-items-center ms-lg-5">
+                <ul
+                  id="account"
+                  class="d-flex justify-content-end list-unstyled m-0"
+                ></ul>
+                <ul
+                  class="d-flex justify-content-end align-items-center list-unstyled m-0"
+                >
+                  <li id="acc" class="d-none">
+                    <a href="account.html" class="me-4">
+                      <iconify-icon
+                        icon="healthicons:person"
+                        class="fs-4 me-2"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li id="forms">
+                    <a
+                      class="btn btn-outline-dark mx-3 p-3"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      >Se connecter/S'inscrire</a
+                    >
+                  </li>
+  
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="tabs-listing mt-4">
+                            <nav>
+                              <div
+                                class="nav nav-tabs d-flex justify-content-center border-0"
+                                id="nav-tab"
+                                role="tablist"
+                              >
+                                <button
+                                  class="btn btn-outline-primary px-5 py-3 me-3 active"
+                                  id="nav-sign-in-tab"
+                                  data-bs-toggle="tab"
+                                  data-bs-target="#nav-sign-in"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="nav-sign-in"
+                                  aria-selected="true"
+                                >
+                                  Se connecter
+                                </button>
+                                <button
+                                  class="btn btn-outline-primary px-5 py-3"
+                                  id="nav-register-tab"
+                                  data-bs-toggle="tab"
+                                  data-bs-target="#nav-register"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="nav-register"
+                                  aria-selected="false"
+                                >
+                                  S'inscrire
+                                </button>
+                              </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                              <div
+                                class="tab-pane fade active show form sign-in"
+                                id="nav-sign-in"
+                                role="tabpanel"
+                                aria-labelledby="nav-sign-in-tab"
+                              >
+                                <form id="login" class="form-group flex-wrap p-3">
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="exampleInputEmail1"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >
+                                      Adresse Email</label
+                                    >
+                                    <input
+                                      type="text"
+                                      placeholder="Email@gmail.com ou username"
+                                      class="form-control ps-3"
+                                      name="txt-emailLogin"
+                                      id="loginusernameOrEmail"
+                                      autocomplete="username"
+                                    />
+                                    <div
+                                      id="emailLoginError"
+                                      class="error-message"
+                                    ></div>
+                                  </div>
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="inputPassword1"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                      >Votre mot de passe</label
+                                    >
+                                    <input
+                                      type="password"
+                                      placeholder="Password"
+                                      class="form-control ps-3"
+                                      aria-describedby="passwordHelpBlock"
+                                      name="txt-passLogin"
+                                      id="loginpassword"
+                                      autocomplete="new-password"
+                                    />
+                                    <div
+                                      id="passwordLoginError"
+                                      class="error-message"
+                                    ></div>
+  
+                                    <div
+                                      id="passwordHelpBlock"
+                                      class="form-text text-center"
+                                    >
+                                      <a href="#" class="password"
+                                        >Mot de passe oublie ?</a
+                                      >
+                                    </div>
+                                  </div>
+  
+                                  <div class="d-grid my-3">
+                                    <button
+                                      class="btn btn-primary px-5 py-3"
+                                      type="button"
+                                      onclick="login()"
+                                    >
+                                      Se connecter
+                                    </button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div
+                                class="tab-pane fade form sign-up"
+                                id="nav-register"
+                                role="tabpanel"
+                                aria-labelledby="nav-register-tab"
+                              >
+                                <form
+                                  id="register"
+                                  class="form-group flex-wrap p-3"
+                                >
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="exampleInputFirstName2"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >
+                                      FirstName</label
+                                    >
+                                    <input
+                                      placeholder="FirstName"
+                                      class="form-control ps-3"
+                                      type="text"
+                                      name="txt-firstname"
+                                      id="signupfirstName"
+                                      autocomplete="new-firstname"
+                                    />
+                                    <div
+                                      id="firstnameError"
+                                      class="error-message"
+                                    ></div>
+                                  </div>
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="exampleInputLastName2"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >
+                                      LastName</label
+                                    >
+                                    <input
+                                      placeholder="LastName"
+                                      class="form-control ps-3"
+                                      type="text"
+                                      name="txt-lastame"
+                                      id="signuplastName"
+                                      autocomplete="new-lastname"
+                                    />
+                                    <div
+                                      id="lastnameError"
+                                      class="error-message"
+                                    ></div>
+                                  </div>
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="exampleInputUserName2"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >
+                                      UserName</label
+                                    >
+                                    <input
+                                      placeholder="UserName"
+                                      class="form-control ps-3"
+                                      type="text"
+                                      name="txt-username"
+                                      id="signupuserName"
+                                      autocomplete="new-lastname"
+                                    />
+                                    <div
+                                      id="usernameError"
+                                      class="error-message"
+                                    ></div>
+                                  </div>
+  
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="exampleInputEmail2"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >
+                                      Adresse email</label
+                                    >
+                                    <input
+                                      placeholder="Email@gmail.com"
+                                      class="form-control ps-3"
+                                      type="email"
+                                      name="txt-email"
+                                      id="signupemail"
+                                      autocomplete="new-username"
+                                    />
+                                    <div
+                                      id="emailError"
+                                      class="error-message"
+                                    ></div>
+                                  </div>
+                                  <div class="form-input col-lg-12 my-4">
+                                    <label
+                                      for="inputPassword2"
+                                      class="form-label fs-6 text-uppercase fw-bold text-black"
+                                      >Mot de passe</label
+                                    >
+                                    <input
+                                      type="password"
+                                      placeholder="Password"
+                                      name="txt-pass"
+                                      id="signuppassword"
+                                      autocomplete="new-password"
+                                      class="form-control ps-3"
+                                      aria-describedby="passwordHelpBlock"
+                                    />
+                                    <span id="passwordToggle"
+                                      ><i class="fa-regular fa-eye"></i
+                                    ></span>
+                                    <div
+                                      id="passwordError"
+                                      class="error-message"
+                                    ></div>
+                                  </div>
+                                  <div class="d-grid my-3">
+                                    <button
+                                      type="button"
+                                      onclick="signup()"
+                                      class="btn btn-primary px-5 py-3"
+                                    >
+                                      S'inscrire
+                                    </button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div id="videos">
+        <video class="video-player" id="user-1" autoplay playsinline></video>
+        <video class="video-player" id="user-2" autoplay playsinline></video>
+    </div>
+
+    <div id="controls">
+
+        <div class="control-container" id="camera-btn">
+            <img src="icons/camera.png" />
+        </div>
+
+        <div class="control-container" id="mic-btn">
+            <img src="icons/mic.png" />
+        </div>
+
+        <a href="lobby.html">
+            <div class="control-container" id="leave-btn">
+                <img src="icons/phone.png" />
+            </div>
+        </a>
+
+    </div>
+    
+</body>
+<!-- jquery
+		============================================ -->
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- bootstrap JS
+            ============================================ -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow JS
+            ============================================ -->
+        <script src="js/wow.min.js"></script>
+        <!-- price-slider JS
+            ============================================ -->
+        <script src="js/jquery-price-slider.js"></script>
+        <!-- owl.carousel JS
+            ============================================ -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- scrollUp JS
+            ============================================ -->
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <!-- meanmenu JS
+            ============================================ -->
+        <script src="js/meanmenu/jquery.meanmenu.js"></script>
+        <!-- counterup JS
+            ============================================ -->
+        <script src="js/counterup/jquery.counterup.min.js"></script>
+        <script src="js/counterup/waypoints.min.js"></script>
+        <script src="js/counterup/counterup-active.js"></script>
+        <!-- mCustomScrollbar JS
+            ============================================ -->
+        <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- jvectormap JS
+            ============================================ -->
+        <script src="js/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="js/jvectormap/jvectormap-active.js"></script>
+        <!-- sparkline JS
+            ============================================ -->
+        <script src="js/sparkline/jquery.sparkline.min.js"></script>
+        <script src="js/sparkline/sparkline-active.js"></script>
+        <!-- flot JS
+            ============================================ -->
+        <script src="js/flot/jquery.flot.js"></script>
+        <script src="js/flot/jquery.flot.resize.js"></script>
+        <script src="js/flot/curvedLines.js"></script>
+        <script src="js/flot/flot-active.js"></script>
+        <!-- knob JS
+            ============================================ -->
+        <script src="js/knob/jquery.knob.js"></script>
+        <script src="js/knob/jquery.appear.js"></script>
+        <script src="js/knob/knob-active.js"></script>
+        <!--  wave JS
+            ============================================ -->
+        <script src="js/wave/waves.min.js"></script>
+        <script src="js/wave/wave-active.js"></script>
+        <!--  Chat JS
+            ============================================ -->
+        <script src="js/chat/moment.min.js"></script>
+        <script src="js/chat/jquery.chat.js"></script>
+        <!--  todo JS
+            ============================================ -->
+        <script src="js/todo/jquery.todo.js"></script>
+        <!-- plugins JS
+            ============================================ -->
+        <script src="js/pluginsdash.js"></script>
+        <!-- main JS
+            ============================================ -->
+        <script src="js/maindash.js"></script>
+        <!-- tawk chat JS
+            ============================================ -->
+        <script src="js/tawk-chat.js"></script>
+    
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="extra/swiper-bundle.min.js.js"></script>
+        <script
+          src="extra/bootstrap.bundle.min.js.js"
+          
+        ></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/script.js"></script>
+        <script src="extra/iconify-icon.min.js.js"></script>
+        <script src="js/index.js"></script>
+<script src="/js/main.js"></script>
+
+<script src='/js/agora-rtm-sdk-1.4.4.js'></script>
+<script src='/js/mainMeet.js'></script>
+<script src="./app.js"></script>
+
+</html>

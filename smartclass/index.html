@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SMART CLASS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="extra/swiper-bundle.min.css" />
+
+    <link href="extra/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="link"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M12 19a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0-4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm-5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm7-12h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3Zm1 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9h16Zm0-11H4V6a1 1 0 0 1 1-1h1v1a1 1 0 0 0 2 0V5h8v1a1 1 0 0 0 2 0V5h1a1 1 0 0 1 1 1ZM7 15a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0 4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="arrow-right"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="category"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M19 5.5h-6.28l-.32-1a3 3 0 0 0-2.84-2H5a3 3 0 0 0-3 3v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-10a3 3 0 0 0-3-3Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h4.56a1 1 0 0 1 .95.68l.54 1.64a1 1 0 0 0 .95.68h7a1 1 0 0 1 1 1Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="calendar"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="heart"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="plus"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="minus"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="cart"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M8.5 19a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 8.5 19ZM19 16H7a1 1 0 0 1 0-2h8.491a3.013 3.013 0 0 0 2.885-2.176l1.585-5.55A1 1 0 0 0 19 5H6.74a3.007 3.007 0 0 0-2.82-2H3a1 1 0 0 0 0 2h.921a1.005 1.005 0 0 1 .962.725l.155.545v.005l1.641 5.742A3 3 0 0 0 7 18h12a1 1 0 0 0 0-2Zm-1.326-9l-1.22 4.274a1.005 1.005 0 0 1-.963.726H8.754l-.255-.892L7.326 7ZM16.5 19a1.5 1.5 0 1 0 1.5 1.5a1.5 1.5 0 0 0-1.5-1.5Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="check"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="trash"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M10 18a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1ZM20 6h-4V5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v1H4a1 1 0 0 0 0 2h1v11a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8h1a1 1 0 0 0 0-2ZM10 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1h-4Zm7 14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8h10Zm-3-1a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="star-outline"
+          viewBox="0 0 15 15"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7.5 9.804L5.337 11l.413-2.533L4 6.674l2.418-.37L7.5 4l1.082 2.304l2.418.37l-1.75 1.793L9.663 11L7.5 9.804Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="star-solid"
+          viewBox="0 0 15 15"
+        >
+          <path
+            fill="currentColor"
+            d="M7.953 3.788a.5.5 0 0 0-.906 0L6.08 5.85l-2.154.33a.5.5 0 0 0-.283.843l1.574 1.613l-.373 2.284a.5.5 0 0 0 .736.518l1.92-1.063l1.921 1.063a.5.5 0 0 0 .736-.519l-.373-2.283l1.574-1.613a.5.5 0 0 0-.283-.844L8.921 5.85l-.968-2.062Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="search"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="user"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z"
+          />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          id="close"
+          viewBox="0 0 15 15"
+        >
+          <path
+            fill="currentColor"
+            d="M7.953 3.788a.5.5 0 0 0-.906 0L6.08 5.85l-2.154.33a.5.5 0 0 0-.283.843l1.574 1.613l-.373 2.284a.5.5 0 0 0 .736.518l1.92-1.063l1.921 1.063a.5.5 0 0 0 .736-.519l-.373-2.283l1.574-1.613a.5.5 0 0 0-.283-.844L8.921 5.85l-.968-2.062Z"
+          />
+        </symbol>
+      </defs>
+    </svg> -->
+
+    <!-- <div class="preloader-wrapper">
+      <div class="preloader"></div>
+    </div> -->
+
+    <nav
+      class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4"
+    >
+      <div class="container-fluid">
+        <div class="main-logo">
+          <a href="index.html"> SMARTCLASS </a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body justify-content-end">
+            <ul
+              class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0"
+            >
+              <li class="nav-item">
+                <a href="index.html" class="nav-link mx-2 active">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="./lobby.html"
+                  class="nav-link mx-2 text-decoration-underline"
+                  >Creer une classe</a
+                >
+              </li>
+
+              <!-- <li id="acc" class="d-none d-lg-flex">
+                <a href="account.html" class="me-4">
+                  <iconify-icon
+                    icon="healthicons:person"
+                    class="fs-4 me-2"
+                  ></iconify-icon>
+                </a>
+              </li> -->
+            </ul>
+
+            <div class="mt-4 ml-0 mt-lg-0 d-lg-flex align-items-center ms-lg-5">
+              <ul
+                id="account"
+                class="d-flex justify-content-end list-unstyled m-0"
+              ></ul>
+              <ul
+                class="d-flex justify-content-end align-items-center list-unstyled m-0"
+              >
+                <li id="acc" class="d-none">
+                  <a href="account.html" class="me-4">
+                    <iconify-icon
+                      icon="healthicons:person"
+                      class="fs-4 me-2"
+                    ></iconify-icon>
+                  </a>
+                </li>
+                <li id="forms">
+                  <a
+                    class="btn btn-outline-dark mx-3 p-3"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    >Se connecter/S'inscrire</a
+                  >
+                </li>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tabs-listing mt-4">
+                          <nav>
+                            <div
+                              class="nav nav-tabs d-flex justify-content-center border-0"
+                              id="nav-tab"
+                              role="tablist"
+                            >
+                              <button
+                                class="btn btn-outline-primary px-5 py-3 me-3 active"
+                                id="nav-sign-in-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-sign-in"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-sign-in"
+                                aria-selected="true"
+                              >
+                                Se connecter
+                              </button>
+                              <button
+                                class="btn btn-outline-primary px-5 py-3"
+                                id="nav-register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-register"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-register"
+                                aria-selected="false"
+                              >
+                                S'inscrire
+                              </button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade active show form sign-in"
+                              id="nav-sign-in"
+                              role="tabpanel"
+                              aria-labelledby="nav-sign-in-tab"
+                            >
+                              <form id="login" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    Adresse Email</label
+                                  >
+                                  <input
+                                    type="text"
+                                    placeholder="Email@gmail.com ou username"
+                                    class="form-control ps-3"
+                                    name="txt-emailLogin"
+                                    id="loginusernameOrEmail"
+                                    autocomplete="username"
+                                  />
+                                  <div
+                                    id="emailLoginError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Votre mot de passe</label
+                                  >
+                                  <input
+                                    type="password"
+                                    placeholder="Password"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                    name="txt-passLogin"
+                                    id="loginpassword"
+                                    autocomplete="new-password"
+                                  />
+                                  <div
+                                    id="passwordLoginError"
+                                    class="error-message"
+                                  ></div>
+
+                                  <div
+                                    id="passwordHelpBlock"
+                                    class="form-text text-center"
+                                  >
+                                    <a href="#" class="password"
+                                      >Mot de passe oublie ?</a
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary px-5 py-3"
+                                    type="button"
+                                    onclick="login()"
+                                  >
+                                    Se connecter
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div
+                              class="tab-pane fade form sign-up"
+                              id="nav-register"
+                              role="tabpanel"
+                              aria-labelledby="nav-register-tab"
+                            >
+                              <form
+                                id="register"
+                                class="form-group flex-wrap p-3"
+                              >
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputFirstName2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    FirstName</label
+                                  >
+                                  <input
+                                    placeholder="FirstName"
+                                    class="form-control ps-3"
+                                    type="text"
+                                    name="txt-firstname"
+                                    id="signupfirstName"
+                                    autocomplete="new-firstname"
+                                  />
+                                  <div
+                                    id="firstnameError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputLastName2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    LastName</label
+                                  >
+                                  <input
+                                    placeholder="LastName"
+                                    class="form-control ps-3"
+                                    type="text"
+                                    name="txt-lastame"
+                                    id="signuplastName"
+                                    autocomplete="new-lastname"
+                                  />
+                                  <div
+                                    id="lastnameError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputUserName2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    UserName</label
+                                  >
+                                  <input
+                                    placeholder="UserName"
+                                    class="form-control ps-3"
+                                    type="text"
+                                    name="txt-username"
+                                    id="signupuserName"
+                                    autocomplete="new-lastname"
+                                  />
+                                  <div
+                                    id="usernameError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    Adresse email</label
+                                  >
+                                  <input
+                                    placeholder="Email@gmail.com"
+                                    class="form-control ps-3"
+                                    type="email"
+                                    name="txt-email"
+                                    id="signupemail"
+                                    autocomplete="new-username"
+                                  />
+                                  <div
+                                    id="emailError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Mot de passe</label
+                                  >
+                                  <input
+                                    type="password"
+                                    placeholder="Password"
+                                    name="txt-pass"
+                                    id="signuppassword"
+                                    autocomplete="new-password"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                  <span id="passwordToggle"
+                                    ><i class="fa-regular fa-eye"></i
+                                  ></span>
+                                  <div
+                                    id="passwordError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="d-grid my-3">
+                                  <button
+                                    type="button"
+                                    onclick="signup()"
+                                    class="btn btn-primary px-5 py-3"
+                                  >
+                                    S'inscrire
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-md-9 col-lg-4 offset-md-1 padding-large ps-lg-0 pe-lg-5"
+          >
+            <h2 class="display-7 text-lowercase fw-semibold">
+              <span class="text-uppercase">D</span>écouvrez notre plateforme de
+              salle de classe intelligente: l'avenir de l'apprentissage en
+              ligne.
+            </h2>
+            <p class="secondary-font my-4 pb-2">
+              Interactivité, engagement, et collaboration au rendez-vous.
+              Bienvenue dans la salle de classe du futur.
+            </p>
+            <div>
+              <a href="/lobby.html"
+                ><button
+                  class="btn btn-primary px-4 py-2"
+                  style="height: -webkit-fill-available"
+                >
+                  <iconify-icon
+                    icon="ph:video-bold"
+                    class="fs-4 py-1"
+                    style="vertical-align: middle"
+                  ></iconify-icon>
+                  Creer un cours
+                </button></a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-7 d-block d-md-none d-lg-block p-0">
+            <img
+              src="images/study-group-african-people.jpg"
+              alt="img"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="padding-medium">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="display-5 fw-semibold">
+            Pourquoi <span class="text-primary"> nous choisir?</span>
+          </h2>
+          <p class="secondary-font">
+            Obtenez de nombreuses fonctionnalites, exactement ce que vous
+            cherchez.
+          </p>
+        </div>
+
+        <div class="row g-md-4 mt-2">
+          <div class="col-lg-4 mt-4">
+            <div class="services-element p-4 rounded-3 d-flex">
+              <div>
+                <iconify-icon
+                  class="service-icon fs-1"
+                  icon="fluent:notepad-person-24-regular"
+                ></iconify-icon>
+              </div>
+
+              <div class="ps-3">
+                <h4 class="py-2 m-0">Personnalisation optimale</h4>
+                <p>
+                  Notre plateforme offre une gamme étendue de fonctionnalités
+                  sur mesure, vous permettant de choisir exactement ce dont vous
+                  avez besoin pour votre salle de classe en ligne. De la
+                  vidéoconférence aux outils de collaboration en passant par les
+                  fonctions d'évaluation, tout est conçu pour répondre à vos
+                  besoins spécifiques.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="services-element p-4 rounded-3 d-flex">
+              <div>
+                <iconify-icon
+                  class="service-icon fs-1"
+                  icon="mdi:virtual-meeting"
+                ></iconify-icon>
+              </div>
+
+              <div class="ps-3">
+                <h4 class="py-2 m-0">Engagement des étudiants</h4>
+                <p>
+                  Avec notre approche axée sur l'interactivité et la
+                  participation, nous garantissons un engagement maximal de vos
+                  élèves. Des fonctionnalités telles que le partage d'écrans,
+                  les salles de discussion et les questionnaires en temps réel
+                  stimulent l'interaction et favorisent une expérience
+                  d'apprentissage dynamique et enrichissante.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="services-element p-4 rounded-3 d-flex">
+              <div>
+                <iconify-icon
+                  class="service-icon fs-1"
+                  icon="uiw:global"
+                ></iconify-icon>
+              </div>
+
+              <div class="ps-3">
+                <h4 class="py-2 m-0">Support dédié et évolutif</h4>
+                <p>
+                  Nous nous engageons à vous offrir un soutien continu et
+                  personnalisé tout au long de votre parcours d'apprentissage en
+                  ligne. Notre équipe est là pour vous accompagner, vous
+                  conseiller et répondre à toutes vos questions, garantissant
+                  ainsi une expérience fluide et évolutive à chaque étape.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="top-sell" class="padding-medium relative">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="display-5 fw-semibold">Demo</h2>
+          <p class="secondary-font">
+            Facile a utiliser comme vous pouvez voir ici.
+          </p>
+        </div>
+        <video
+          style="
+            width: 800px;
+            margin: 0px auto;
+            justify-content: center;
+            display: flex;
+          "
+          src="videos/SMART-CLASS.mp4"
+          autoplay="true"
+        ></video>
+      </div>
+    </section>
+
+    <section id="achivement" style="background-color: #f5f5f5">
+      <div class="container padding-medium">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="images/topic.png" alt="img" class="img-fluid" />
+              <h4 class="py-2 mt-3 m-0">300+ Classes</h4>
+              <p class="text-uppercase">Assiste a un cours</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="images/student.png" alt="img" class="img-fluid" />
+              <h4 class="py-2 mt-3 m-0">1000+ Etudiants</h4>
+              <p class="text-uppercase">Un futur en preparation</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="images/instruction.png" alt="img" class="img-fluid" />
+              <h4 class="py-2 mt-3 m-0">300+ Enseignants</h4>
+              <p class="text-uppercase">Formateurs professionnels</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="images/award.png" alt="img" class="img-fluid" />
+              <h4 class="py-2 mt-3 m-0">120+ Recompenses</h4>
+              <p class="text-uppercase">Sollicite partout dans le monde</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="testimonial"
+      style="
+        background-image: url(images/background-img.jpg);
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="container padding-medium">
+        <div class="text-center">
+          <h2 class="display-5 fw-semibold">
+            Ce que nos apprenants(es) <span class="text-primary"> disent</span>
+          </h2>
+          <p class="secondary-font"></p>
+        </div>
+        <div class="row">
+          <div class="offset-md-1 col-md-10">
+            <div class="swiper testimonial-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="text-center my-4">
+                    <img
+                      src="images/portrait-homme-serieux.jpg"
+                      alt="img"
+                      class="img-fluid rounded-circle review-img"
+                    />
+                    <h5 class="m-0 mt-2">TOBENI Recco</h5>
+                    <p class="text-muted">Etudiant en 2emme annee IFRI</p>
+                    <p class="lh-lg fw-bold text-black-50">
+                      “Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea. Consectetur
+                      adipisicing elit, sed do eiusmod tempor incididunt enim ad
+                      minim veniam”
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-center my-4">
+                    <img
+                      src="images/tete-homme-confiant-peau-sombre-belle-peau-saine-propre-moustache-petite-barbe-habille-desinvolture-regardant-serieusement-tout-posant-interieur-contre-mur-beton.jpg"
+                      alt="img"
+                      class="img-fluid rounded-circle review-img"
+                    />
+                    <h5 class="m-0 mt-2">Georgie ASION</h5>
+                    <p class="text-muted">Master en Agronomie</p>
+                    <p class="lh-lg fw-bold text-black-50">
+                      “Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea. Consectetur
+                      adipisicing elit, sed do eiusmod tempor incididunt enim ad
+                      minim veniam”
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-center my-4">
+                    <img
+                      src="images/worldface-femme-americaine-dans-fond-blanc.jpg"
+                      alt="img"
+                      class="img-fluid rounded-circle review-img"
+                    />
+                    <h5 class="m-0 mt-2">Emmy CHOUKE</h5>
+                    <p class="text-muted">Doctorant FASEG</p>
+                    <p class="lh-lg fw-bold text-black-50">
+                      “Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea. Consectetur
+                      adipisicing elit, sed do eiusmod tempor incididunt enim ad
+                      minim veniam”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container padding-medium">
+        <div class="row">
+          <div class="col-md-4 my-3">
+            <h5 class="text-uppercase fw-bold mb-4">Nous contacter</h5>
+            <p>
+              <iconify-icon
+                class="social-icon text-primary fs-5 me-2"
+                icon="mdi:location"
+                style="vertical-align: text-bottom"
+              ></iconify-icon>
+              <span class="fw-bold">Addresse: </span> Abomey-Calavi, Benin
+            </p>
+            <p>
+              <iconify-icon
+                class="social-icon text-primary fs-5 me-2"
+                icon="solar:phone-bold"
+                style="vertical-align: text-bottom"
+              ></iconify-icon>
+              <span class="fw-bold">Telephone: </span> (229) 99 710-464
+            </p>
+            <p>
+              <iconify-icon
+                class="social-icon text-primary fs-5 me-2"
+                icon="ic:baseline-email"
+                style="vertical-align: text-bottom"
+              ></iconify-icon>
+              <span class="fw-bold">Email: </span>
+              ifrig1@aqlmaster.com
+            </p>
+          </div>
+          <div class="col-md-2 my-3">
+            <div class="footer-menu">
+              <h5 class="text-uppercase fw-bold mb-4">Liens</h5>
+              <ul class="menu-list list-unstyled">
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">Acceuil</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">A propos de nous</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">Classes</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 my-3">
+            <div class="footer-menu">
+              <h5 class="text-uppercase fw-bold mb-4">support</h5>
+              <ul class="menu-list list-unstyled">
+                <li class="menu-item mb-2">
+                  <a href="#">FAQs</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="footer-menu">
+              <h5 class="text-uppercase fw-bold mb-4">Nous suivre</h5>
+              <div class="social-links mt-4">
+                <ul class="d-flex list-unstyled gap-3">
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:facebook-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:twitter-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:pinterest-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:instagram-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:youtube-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="footer-bottom">
+      <hr class="m-0 text-black-50" />
+      <div class="container py-3">
+        <div class="row mt-3">
+          <div class="col-md-6 copyright">
+            <p>© 2024. Tous droits reserves.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p>
+              Made by
+              <a target="_blank" class="text-decoration-underline fw-bold">
+                Groupe 1 - AQL</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="extra/swiper-bundle.min.js.js"></script>
+    <script src="extra/bootstrap.bundle.min.js.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="extra/iconify-icon.min.js.js"></script>
+    <script src="extra/axios.min.js.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SMART CLASS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="extra/swiper-bundle.min.css" />
+
+    <link href="extra/bootstrap.bundle.min.js.js" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4"
+    >
+      <div class="container-fluid">
+        <div class="main-logo">
+          <a href="index.html"> SMARTCLASS </a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body justify-content-end">
+            <ul
+              class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0"
+            >
+              <li class="nav-item">
+                <a href="index.html" class="nav-link mx-2 active">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="./lobby.html"
+                  class="nav-link mx-2 text-decoration-underline"
+                  >Creer une classe</a
+                >
+              </li>
+
+              <!-- <li id="acc" class="d-none d-lg-flex">
+                <a href="account.html" class="me-4">
+                  <iconify-icon
+                    icon="healthicons:person"
+                    class="fs-4 me-2"
+                  ></iconify-icon>
+                </a>
+              </li> -->
+            </ul>
+
+            <div class="mt-4 ml-0 mt-lg-0 d-lg-flex align-items-center ms-lg-5">
+              <ul
+                id="account"
+                class="d-flex justify-content-end list-unstyled m-0"
+              ></ul>
+              <ul
+                class="d-flex justify-content-end align-items-center list-unstyled m-0"
+              >
+                <li id="acc" class="d-none">
+                  <a href="account.html" class="me-4">
+                    <iconify-icon
+                      icon="healthicons:person"
+                      class="fs-4 me-2"
+                    ></iconify-icon>
+                  </a>
+                </li>
+                <li id="forms">
+                  <a
+                    class="btn btn-outline-dark mx-3 p-3"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    >Se connecter/S'inscrire</a
+                  >
+                </li>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tabs-listing mt-4">
+                          <nav>
+                            <div
+                              class="nav nav-tabs d-flex justify-content-center border-0"
+                              id="nav-tab"
+                              role="tablist"
+                            >
+                              <button
+                                class="btn btn-outline-primary px-5 py-3 me-3 active"
+                                id="nav-sign-in-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-sign-in"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-sign-in"
+                                aria-selected="true"
+                              >
+                                Se connecter
+                              </button>
+                              <button
+                                class="btn btn-outline-primary px-5 py-3"
+                                id="nav-register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-register"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-register"
+                                aria-selected="false"
+                              >
+                                S'inscrire
+                              </button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade active show form sign-in"
+                              id="nav-sign-in"
+                              role="tabpanel"
+                              aria-labelledby="nav-sign-in-tab"
+                            >
+                              <form id="login" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    Adresse Email</label
+                                  >
+                                  <input
+                                    type="text"
+                                    placeholder="Email@gmail.com ou username"
+                                    class="form-control ps-3"
+                                    name="txt-emailLogin"
+                                    id="loginusernameOrEmail"
+                                    autocomplete="username"
+                                  />
+                                  <div
+                                    id="emailLoginError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Votre mot de passe</label
+                                  >
+                                  <input
+                                    type="password"
+                                    placeholder="Password"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                    name="txt-passLogin"
+                                    id="loginpassword"
+                                    autocomplete="new-password"
+                                  />
+                                  <div
+                                    id="passwordLoginError"
+                                    class="error-message"
+                                  ></div>
+
+                                  <div
+                                    id="passwordHelpBlock"
+                                    class="form-text text-center"
+                                  >
+                                    <a href="#" class="password"
+                                      >Mot de passe oublie ?</a
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary px-5 py-3"
+                                    type="button"
+                                    onclick="login()"
+                                  >
+                                    Se connecter
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div
+                              class="tab-pane fade form sign-up"
+                              id="nav-register"
+                              role="tabpanel"
+                              aria-labelledby="nav-register-tab"
+                            >
+                              <form
+                                id="register"
+                                class="form-group flex-wrap p-3"
+                              >
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputFirstName2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    FirstName</label
+                                  >
+                                  <input
+                                    placeholder="FirstName"
+                                    class="form-control ps-3"
+                                    type="text"
+                                    name="txt-firstname"
+                                    id="signupfirstName"
+                                    autocomplete="new-firstname"
+                                  />
+                                  <div
+                                    id="firstnameError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputLastName2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    LastName</label
+                                  >
+                                  <input
+                                    placeholder="LastName"
+                                    class="form-control ps-3"
+                                    type="text"
+                                    name="txt-lastame"
+                                    id="signuplastName"
+                                    autocomplete="new-lastname"
+                                  />
+                                  <div
+                                    id="lastnameError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputUserName2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    UserName</label
+                                  >
+                                  <input
+                                    placeholder="UserName"
+                                    class="form-control ps-3"
+                                    type="text"
+                                    name="txt-username"
+                                    id="signupuserName"
+                                    autocomplete="new-lastname"
+                                  />
+                                  <div
+                                    id="usernameError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >
+                                    Adresse email</label
+                                  >
+                                  <input
+                                    placeholder="Email@gmail.com"
+                                    class="form-control ps-3"
+                                    type="email"
+                                    name="txt-email"
+                                    id="signupemail"
+                                    autocomplete="new-username"
+                                  />
+                                  <div
+                                    id="emailError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Mot de passe</label
+                                  >
+                                  <input
+                                    type="password"
+                                    placeholder="Password"
+                                    name="txt-pass"
+                                    id="signuppassword"
+                                    autocomplete="new-password"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                  <span id="passwordToggle"
+                                    ><i class="fa-regular fa-eye"></i
+                                  ></span>
+                                  <div
+                                    id="passwordError"
+                                    class="error-message"
+                                  ></div>
+                                </div>
+                                <div class="d-grid my-3">
+                                  <button
+                                    type="button"
+                                    onclick="signup()"
+                                    class="btn btn-primary px-5 py-3"
+                                  >
+                                    S'inscrire
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-md-12 padding-large ps-lg-0 pe-lg-5 display-7 text-uppercase text-center"
+          >
+            <img style="max-width: 200px" src="./images/Shrug-bro.png" alt="" />
+            <p>Classe non trouvee</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container padding-medium">
+        <div class="row">
+          <div class="col-md-4 my-3">
+            <h5 class="text-uppercase fw-bold mb-4">Nous contacter</h5>
+            <p>
+              <iconify-icon
+                class="social-icon text-primary fs-5 me-2"
+                icon="mdi:location"
+                style="vertical-align: text-bottom"
+              ></iconify-icon>
+              <span class="fw-bold">Addresse: </span> Abomey-Calavi, Benin
+            </p>
+            <p>
+              <iconify-icon
+                class="social-icon text-primary fs-5 me-2"
+                icon="solar:phone-bold"
+                style="vertical-align: text-bottom"
+              ></iconify-icon>
+              <span class="fw-bold">Telephone: </span> (229) 99 710-464
+            </p>
+            <p>
+              <iconify-icon
+                class="social-icon text-primary fs-5 me-2"
+                icon="ic:baseline-email"
+                style="vertical-align: text-bottom"
+              ></iconify-icon>
+              <span class="fw-bold">Email: </span>
+              ifrig1@aqlmaster.com
+            </p>
+          </div>
+          <div class="col-md-2 my-3">
+            <div class="footer-menu">
+              <h5 class="text-uppercase fw-bold mb-4">Liens</h5>
+              <ul class="menu-list list-unstyled">
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">Acceuil</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">A propos de nous</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">Classes</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#" class="footer-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 my-3">
+            <div class="footer-menu">
+              <h5 class="text-uppercase fw-bold mb-4">support</h5>
+              <ul class="menu-list list-unstyled">
+                <li class="menu-item mb-2">
+                  <a href="#">FAQs</a>
+                </li>
+                <li class="menu-item mb-2">
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="footer-menu">
+              <h5 class="text-uppercase fw-bold mb-4">Nous suivre</h5>
+              <div class="social-links mt-4">
+                <ul class="d-flex list-unstyled gap-3">
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:facebook-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:twitter-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:pinterest-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:instagram-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <iconify-icon
+                        class="social-icon fs-4 me-2"
+                        icon="ri:youtube-fill"
+                      ></iconify-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="footer-bottom">
+      <hr class="m-0 text-black-50" />
+      <div class="container py-3">
+        <div class="row mt-3">
+          <div class="col-md-6 copyright">
+            <p>© 2024. Tous droits reserves.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p>
+              Made by
+              <a target="_blank" class="text-decoration-underline fw-bold">
+                Groupe 1 - AQL</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="extra/swiper-bundle.min.js.js"></script>
+    <script src="extra/bootstrap.bundle.min.js.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="extra/iconify-icon.min.js.js"></script>
+    <script src="./app.js"></script>
+    <script src="extra/axios.min.js.js"></script>
+  </body>
+</html>
